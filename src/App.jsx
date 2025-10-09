@@ -7,7 +7,7 @@ const App = () => {
     <div className="p-0 m-0 box-border min-h-screen flex flex-col">
       <Header />
       <Hero />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

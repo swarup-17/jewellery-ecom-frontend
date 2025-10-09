@@ -14,7 +14,7 @@ const Header = () => {
   const navItemStyle =
     "font-medium border-b-2 border-transparent hover:border-current focus:border-current transition-colors duration-300 pb-1";
   return (
-    <header className="top-0 left-0 w-full pt-8 bg-transparent hover:bg-white hover:text-black text-white z-50">
+    <header className="top-0 left-0 w-full lg:pt-8 py-3 lg:pb-0 bg-transparent hover:bg-white hover:text-black text-white z-50">
       <nav className="flex justify-around items-center">
         <div className="flex items-start md:gap-8 sm:gap-3 gap-2">
           <button className="lg:hidden ml-2">
@@ -23,11 +23,11 @@ const Header = () => {
           <button>
             <Search className="w-6 h-6 cursor-pointer" />
           </button>
-          <button>
+          <button className="hidden lg:block ml-2">
             <MapPin className="w-6 h-6 cursor-pointer" />
           </button>
         </div>
-        <h1 className="scroll-m-20 text-center lg:text-7xl text-3xl tracking-tight text-balance">
+        <h1 className="scroll-m-20 text-center lg:text-7xl md:text-5xl text-3xl tracking-tight text-balance">
           ECAS & CO.
         </h1>
 
@@ -63,7 +63,7 @@ const Header = () => {
                     <NavigationMenuLink asChild>
                       <a className="relative group flex h-full w-full select-none flex-col justify-end overflow-hidden rounded-md p-6 no-underline outline-none focus:shadow-md">
                         <img
-                          src={asset.allJewellery}
+                          src={asset.silver2}
                           alt="Pure Silver Collection"
                           className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
@@ -98,24 +98,23 @@ const Header = () => {
               >
                 FINE GOLD
               </NavigationMenuTrigger>
-              <NavigationMenuContent className="w-screen max-w-none left-0">
+              <NavigationMenuContent className="w-screen left-0">
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] mx-auto">
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
                       <a className="relative group flex h-full w-full select-none flex-col justify-end overflow-hidden rounded-md p-6 no-underline outline-none focus:shadow-md">
                         <img
                           src={asset.gold}
-                          alt="9KT Fine Gold Collection"
+                          alt="Fine Gold Collection"
                           className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                         <div className="relative z-10">
                           <div className="mb-2 mt-4 text-lg font-medium text-white">
-                            9KT Fine Gold
+                            Fine Gold
                           </div>
                           <p className="text-sm leading-tight text-gray-200">
-                            Discover our radiant collection of 9KT gold
-                            jewellery.
+                            Discover our radiant collection of gold jewellery.
                           </p>
                         </div>
                       </a>
@@ -146,7 +145,48 @@ const Header = () => {
                     <NavigationMenuLink asChild>
                       <a className="relative group flex h-full w-full select-none flex-col justify-end overflow-hidden rounded-md p-6 no-underline outline-none focus:shadow-md">
                         <img
-                          src={asset.karwaChauth}
+                          src={asset.watch2}
+                          alt="Fine Watches Collection"
+                          className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        <div className="relative z-10">
+                          <div className="mb-1 mt-4 text-lg font-medium text-white">
+                            Fine Watches Collection
+                          </div>
+                          <p className="text-sm leading-tight text-gray-200">
+                            Celebrate in style with our exclusive festive
+                            designs.
+                          </p>
+                        </div>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <ul className="flex flex-col gap-2">
+                    <li className="px-3 pb-2 font-medium text-gray-400">
+                      Shop By Category
+                    </li>
+                    <ListItem title="Women's Watches" />
+                    <ListItem title="Men's Watches" />
+                    <ListItem title="All Fine Watches" />
+                  </ul>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger
+                className={cn(navItemStyle, "cursor-pointer")}
+              >
+                GIFTS
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="w-screen max-w-none left-0">
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] mx-auto">
+                  <li className="row-span-3">
+                    <NavigationMenuLink asChild>
+                      <a className="relative group flex h-full w-full select-none flex-col justify-end overflow-hidden rounded-md p-6 no-underline outline-none focus:shadow-md">
+                        <img
+                          src={asset.gift}
                           alt="Diwali Special Collection"
                           className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
@@ -174,12 +214,6 @@ const Header = () => {
                   </ListItem>
                 </ul>
               </NavigationMenuContent>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuLink href="#" className={navItemStyle}>
-                GIFTS
-              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
