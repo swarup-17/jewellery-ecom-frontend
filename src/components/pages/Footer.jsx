@@ -27,13 +27,13 @@ const Footer = () => {
   return (
     <footer className="bg-gray-50 text-black border-t border-gray-200">
       <div className="max-w-[90rem] mx-auto px-6 sm:px-8 md:px-16 lg:px-24 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-8">
           {footerCols.map((col) => (
-            <div key={col.id}>
+            <div key={col.id} className="flex flex-col items-center">
               <p className="mb-4 text-lg font-semibold pb-2 border-b-2 border-black inline-block">
                 {col.category}
               </p>
-              <ul className="flex flex-col gap-3">
+              <ul className="flex flex-col items-center gap-3">
                 {col.links.map((link, i) => (
                   <li key={i}>
                     <a
@@ -51,8 +51,6 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto flex flex-col items-center justify-around gap-5 p-5">
-        <p>&copy; 2025 All rights reserved.</p>
-
         <div className="flex items-center gap-x-5">
           <a
             href="#"
@@ -85,6 +83,7 @@ const Footer = () => {
             <Linkedin className="h-5 w-5" />
           </a>
         </div>
+        <p>&copy; 2025 All rights reserved.</p>
       </div>
     </footer>
   );

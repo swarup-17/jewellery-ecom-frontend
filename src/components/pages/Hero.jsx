@@ -182,10 +182,10 @@ const Hero = () => {
         </div>
       </section>
 
-      <section className="relative bg-white py-16 md:py-20">
+      <section className="relative bg-white py-8 md:py-10">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h2 className="scroll-m-20 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-12">
+            <h2 className="scroll-m-20 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-4">
               Our Brand Experience
             </h2>
 
