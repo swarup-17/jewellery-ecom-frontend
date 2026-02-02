@@ -1,12 +1,12 @@
 import { asset } from "../../assets/asset";
 
 const categories = [
-  { name: "EARRINGS", image: asset.earring, alt: "Earrings" },
-  { name: "RINGS", image: asset.ring, alt: "Rings" },
-  { name: "NECKLACES", image: asset.necklace, alt: "Necklaces" },
-  { name: "BRACELETS", image: asset.bracelet, alt: "Bracelets" },
-  { name: "WATCHES", image: asset.watch, alt: "Watches" },
-  { name: "HOME", image: asset.home, alt: "Home" },
+  { name: "EARRINGS", image: asset.pic1, alt: "Earrings" },
+  { name: "RINGS", image: asset.pic2, alt: "Rings" },
+  { name: "NECKLACES", image: asset.pic3, alt: "Necklaces" },
+  { name: "BRACELETS", image: asset.pic4, alt: "Bracelets" },
+  { name: "WATCHES", image: asset.pic5, alt: "Watches" },
+  { name: "HOME", image: asset.pic6, alt: "Home" },
 ];
 const collections = [
   { image: asset.collection1, alt: "Collection1" },
@@ -19,7 +19,7 @@ const sets = [
   { name: "Gold Jewelry", image: asset.jewellery, alt: "Jewelry" },
 ];
 
-export const experienceItems = [
+const experienceItems = [
   {
     id: 1,
     imageSrc: asset.book,
@@ -63,7 +63,7 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="fixed top-0 left-0 w-full h-full object-cover -z-10"
+          className="fixed top-0 left-0 bottom-0 w-full h-full object-cover -z-10"
         >
           <source src={asset.banner} type="video/mp4" />
           Video not available.
@@ -85,7 +85,7 @@ const Hero = () => {
           <div className="grid grid-cols-6 gap-x-4 gap-y-8 px-4 max-lg:grid-cols-3 max-md:grid-cols-2">
             {categories.map((category) => (
               <div key={category.name} className="text-center">
-                <div className="group overflow-hidden rounded-lg aspect-square">
+                <div className="group overflow-hidden rounded-lg aspect-square cursor-pointer">
                   <img
                     src={category.image}
                     alt={category.alt}
@@ -162,7 +162,7 @@ const Hero = () => {
               Experience our collections firsthand and get personalized advice
               from our experts.
             </p>
-            <button className="border-black border-1 text-black font-semibold py-3 px-8 rounded-full hover:bg-black hover:text-white transition-colors">
+            <button className="border-black border-1 text-black font-semibold py-3 px-8 rounded-full hover:bg-black hover:text-white transition-colors cursor-pointer">
               Find a Store
             </button>
           </div>
@@ -205,13 +205,11 @@ const Hero = () => {
                   </div>
 
                   <div className="flex flex-col items-center justify-around gap-3">
-                    <h3 className="text-xl sm:text-2xl tracking-tight">
-                      {item.title}
-                    </h3>
+                    <h3 className="text-xl sm:text-2xl">{item.title}</h3>
                     <p className="text-sm sm:text-base text-gray-600 max-w-xs">
                       {item.description}
                     </p>
-                    <button className="mt-4 text-sm sm:text-base font-semibold py-2 px-6 hover:border-b-2 hover:border-blue-400 cursor-pointer">
+                    <button className="mt-4 text-sm sm:text-base font-semibold  px-6 hover:border-b-2 hover:border-blue-400 cursor-pointer">
                       {item.buttonText}
                     </button>
                   </div>

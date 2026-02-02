@@ -25,19 +25,19 @@ const footerCols = [
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-50 text-black border-t border-gray-200">
+    <footer className="bg-black text-white border-b-8 border-black">
       <div className="max-w-[90rem] mx-auto px-6 sm:px-8 md:px-16 lg:px-24 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-8">
           {footerCols.map((col) => (
             <div key={col.id} className="flex flex-col items-center">
-              <p className="mb-4 text-lg font-semibold pb-2 border-b-2 border-black inline-block">
+              <p className="mb-4 text-lg font-semibold pb-2 border-b-2 border-white inline-block">
                 {col.category}
               </p>
               <ul className="flex flex-col items-center gap-3">
                 {col.links.map((link, i) => (
                   <li key={i}>
                     <a
-                      className="text-gray-600 hover:text-black transition-colors text-sm"
+                      className="text-white hover:text-white transition-colors text-sm"
                       href="#"
                     >
                       {link}
@@ -54,36 +54,42 @@ const Footer = () => {
         <div className="flex items-center gap-x-5">
           <a
             href="#"
-            className="text-gray-500 hover:text-gray-900 transition-colors"
+            className="text-gray-500 hover:text-white transition-colors"
           >
             <Instagram className="h-5 w-5" />
           </a>
           <a
             href="#"
-            className="text-gray-500 hover:text-gray-900 transition-colors"
+            className="text-gray-500 hover:text-white transition-colors"
           >
             <Twitter className="h-5 w-5" />
           </a>
           <a
             href="#"
-            className="text-gray-500 hover:text-gray-900 transition-colors"
+            className="text-gray-500 hover:text-white transition-colors"
           >
             <Youtube className="h-5 w-5" />
           </a>
           <a
             href="#"
-            className="text-gray-500 hover:text-gray-900 transition-colors"
+            className="text-gray-500 hover:text-white transition-colors"
           >
             <Facebook className="h-5 w-5" />
           </a>
           <a
             href="#"
-            className="text-gray-500 hover:text-gray-900 transition-colors"
+            className="text-gray-500 hover:text-white transition-colors"
           >
             <Linkedin className="h-5 w-5" />
           </a>
         </div>
         <p>&copy; 2025 All rights reserved.</p>
+      </div>
+
+      <div>
+        <h1 className="text-center text-9xl font-extrabold bg-gradient-to-b from-white to-black bg-clip-text text-transparent">
+          HOUSE OF IRA
+        </h1>
       </div>
     </footer>
   );
